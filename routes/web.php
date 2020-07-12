@@ -24,5 +24,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@home');
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
+Route::get('/test', function (){
+    return json_encode("success");
+});
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
