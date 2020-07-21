@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<form action=" " enctype="multipart/form-data" method="post">
+<form action="/pro " enctype="multipart/form-data" method="POST">
 
     @csrf
 

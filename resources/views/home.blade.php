@@ -56,10 +56,13 @@
 
           <div class="row d-flex pt-5"> 
           <div class="col">
-          <a href="/p/create" class="post"> <h5>Add a New Post </h5></a>
+                <a href="/p/create" class="post"> <h5>Add a New Post </h5></a>
           </div>
           <div class="col">
-          <a href="#" class="edit"> <h5> Edit a post </h5></a>
+               <a href="#" class="edit"> <h5> Edit a post </h5></a>
+          </div>
+          <div class="col">
+                <a href="/pro/test" class="profile"> <h5> Create a Profile </h5></a>
           </div>
           </div>
 

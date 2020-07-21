@@ -2,6 +2,7 @@
 
 
 @section('content')
+
 <div class="container">
 
     <div class="row pt-5 pb-3"> <h1>{{ $user->username }}</h1></div> 
@@ -12,14 +13,13 @@
      
      <div>
 
-            {{-- {{json_encode($profile)}} --}}
-            @foreach ($user->profile->get() as $item)
-                  <div class="row pt-2">{{$item->title}}</div>
 
-                  <div class="row pt-2">{{$item->description}}</div>
+                  <div class="row pt-2">{{$user->profile->title}}</div>
+
+                  <div class="row pt-2">{{$user->profile->description}}</div>
       
-                  <div class="row pt-2 pb-2">{{$item->email }}</div>
-            @endforeach 
+                  <div class="row pt-2 pb-2">{{$user->profile->email }}</div>
+
 
             {{-- <div class="row pt-2">{{$user->profile->title}}</div>
 
@@ -55,11 +55,15 @@
     </div>
 
           <div class="row d-flex pt-5"> 
+         <div class="col">
+                <a href="/p/create" class="edit"> <h5> Add a New Post </h5></a>
+          </div>
+
           <div class="col">
-          <a href="/p/create" class="post"> <h5> Add a New Post </h5></a>
+                <a href="#" class="edit"> <h5> Edit a post </h5></a>
           </div>
           <div class="col">
-          <a href="#" class="edit"> <h5> Edit a post </h5></a>
+                <a href="/pro/test" class="profile"> <h5> Create a Profile </h5></a>
           </div>
           </div>
 

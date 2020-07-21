@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use DB;
-
 class ProfilesController extends Controller
 {
 
-    public function __construct(){
+    public function __construct()
+    {
 
         return $this->middleware('auth');
     }
@@ -17,18 +15,22 @@ class ProfilesController extends Controller
     {
         $user = \App\User::findOrFail($user);
 
-        if($user->profile == null)
-        {
+        // dd($user->profile);
+        if ($user->profile == null) {
             return view('home');
         }
 
-        // $profile = DB::select("SELECT profiles.*, users.name, users.email as user_email FROM profiles, users WHERE 
+        // $profile = DB::select("SELECT profiles.*, users.name, users.email as user_email FROM profiles, users WHERE
         // profiles.user_id = users.id AND profiles.user_id=:user",["user" => $user->id]);
 
-        
         return view('profiles.index', [
             'user' => $user,
             // 'profile' => $profile,
         ]);
     }
+    public function test()
+    {
+        return view('profiles.test');
+    }
+
 }
